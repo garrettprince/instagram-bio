@@ -16,7 +16,7 @@ const password = process.env.IG_PASSWORD;
 //   console.log(`Listening on port ${port}`);
 // });
 
-const autoBioUpdate = async () => {
+export const autoBioUpdate = async () => {
   // Array of job titles I want this function to cycle through
 
   // Instantiating the IG API Client
@@ -31,27 +31,26 @@ const autoBioUpdate = async () => {
   // Log out of Instagram when done
   process.nextTick(async () => await ig.simulate.postLoginFlow());
 
-  // Edit IG bio here
-  // Line breaks are recognized
-  await ig.account.setBiography("Jockey For The Tall Horses");
-
   // Edit IG profile details here
-  //   await ig.account.editProfile({
-  //     name: `Garrett Prince | "${jobTitles[62]}"`,
-  //     biography: "Test",
-  //   });
+  await ig.account.editProfile({
+    name: `Garrett Prince | "${jobTitles[62]}"`,
+    bio: "Test",
+  });
+
+  // If line breaks are needed in bio, edit IG bio this way UPDATE, doesn't work
+  //   await ig.account.setBiography("Jockey For The Tall Horses");
 };
 
-// const cronInsta = new CronJob("30 5 * * *", async () => {
+// const cronInsta = new CronJob("* 24 * * *", async () => {
 //   autoBioUpdate();
 // });
 
 // cronInsta.start();
 
-autoBioUpdate();
+// autoBioUpdate();
 
-// const testFunc = () => {
-//   console.log(jobTitles[62]);
-// };
+export const testFunc = () => {
+  console.log(jobTitles[62]);
+};
 
 // testFunc();
