@@ -8,12 +8,14 @@
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
     "cron": "^2.2.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "instagram-private-api": "^1.45.3",
+    "re2": "^1.18.0",
     "request-promise": "^4.2.6"
   }
 }
