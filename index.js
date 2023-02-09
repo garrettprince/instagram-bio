@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import { IgApiClient } from "instagram-private-api";
 import { CronJob } from "cron";
+import { jobTitles } from "./data.js";
 dotenv.config();
 
 const username = process.env.IG_USERNAME;
@@ -17,47 +18,6 @@ const password = process.env.IG_PASSWORD;
 
 const autoBioUpdate = async () => {
   // Array of job titles I want this function to cycle through
-  const jobTitles = [
-    "Part Time Treasure Hunter",
-    "Train Pusher",
-    "'Ruby' Guy",
-    "Professional Mourner",
-    "Discgraced Odor Judge",
-    "Electrified Domino's Delivery Car",
-    "Full Time Gimp",
-    "Hungry Assistant Chef",
-    "Rush Roadie",
-    "Snake Milkman",
-    "Old Youngman",
-    "Part Time Jewel 'Borrower'",
-    "Body Hair Enthusiast",
-    "Tired CEO Sympathizer",
-    "Horny Preacher",
-    "Believable Alien",
-    "Full Time Mom",
-    "Cement Seer",
-    "Oracle of the Ugly",
-    "Seaman",
-    "Freezing Cold Mayor",
-    "YouTube Appraiser",
-    "Gut Enthusiast",
-    "Ice Cream Denier",
-    "Warm Beef Appraiser",
-    "Love Falcon",
-    "DragonBall Z Historian",
-    "Postpubescant",
-    "Succession Critic",
-    "Apartment Spear Hunter",
-    "Thighdiver",
-    "RateMyTeacher Admin",
-    "Aquatic Hitman",
-    "Discgraced Decathlete",
-    "G.I. Joe Court Marshall",
-    "Equine Attourney",
-    "Mortuary Ventriloquist",
-    "Space Apologist",
-    ""
-  ];
 
   // Instantiating the IG API Client
   const ig = new IgApiClient();
@@ -71,12 +31,15 @@ const autoBioUpdate = async () => {
   // Log out of Instagram when done
   process.nextTick(async () => await ig.simulate.postLoginFlow());
 
-  // Actual editing of IG bio here
+  // Edit IG bio here
   // Line breaks are recognized
-  await ig.account.setBiography(
-    `bio
-    second line`
-  );
+  await ig.account.setBiography("Jockey For The Tall Horses");
+
+  // Edit IG profile details here
+  //   await ig.account.editProfile({
+  //     name: `Garrett Prince | "${jobTitles[62]}"`,
+  //     biography: "Test",
+  //   });
 };
 
 // const cronInsta = new CronJob("30 5 * * *", async () => {
@@ -85,10 +48,10 @@ const autoBioUpdate = async () => {
 
 // cronInsta.start();
 
-// autoBioUpdate();
+autoBioUpdate();
 
 // const testFunc = () => {
-//   console.log(username);
+//   console.log(jobTitles[62]);
 // };
 
 // testFunc();
