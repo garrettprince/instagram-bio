@@ -1,5 +1,6 @@
 import airplane from "airplane";
-import { autoBioUpdate, testFunc } from ".";
+import { autoBioUpdate } from "./index";
+import { testFunc } from './test'
 
 export default airplane.task(
   {
