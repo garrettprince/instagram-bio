@@ -377,9 +377,15 @@ export const jobTitles = [
   "HomelyFans Founder",
   "Peak Male ",
   "Based Hummer Driver",
-  "Le Mas Partner Out Of Wedlock",
+  "Lamaze Partner Out Of Wedlock",
   "Faulty Wirer",
   "Guidance Counselor Energy",
   "Number 1 Tumnus Lover",
-  ""
+  "The First Sad Person On A Jet Ski",
+  "One Of The Five People You Meet In Heaven",
+  "Nepotism Baby",
+  "LL Ghoul J",
+  "Excited Rube",
+  "Wake And Baking Soda",
+  "People Magazine's Sexiest Van"
 ];
