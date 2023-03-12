@@ -53,7 +53,7 @@ async function autoBioUpdate() {
       availableJobs[Math.floor(Math.random() * availableJobs.length)];
 
     // Update the biography with the chosen word
-    const bio = `${chosenJob}\nTest`;
+    const bio = `${chosenJob}\nUnited States`;
     await ig.account.setBiography(bio);
 
     // Add the used word to the usedWords array and write it to the file
