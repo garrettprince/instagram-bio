@@ -405,3 +405,24 @@ export const jobTitles = [
   "Parental Sunning",
   "Leslie Snipes",
 ];
+
+// const randomizedJobs = jobTitles => {
+//   for (let i = jobTitles.length - 1; i > 0;) {
+//     const j = Math.floor(Math.random() * i + 1)
+//     const temp = jobTitles[i]
+//     jobTitles[i] = jobTitles[j]
+//     jobTitles[j] = temp
+//   }
+
+//   return jobTitles
+// }
+
+// console.log(jobTitles.length)
+// randomizedJobs()
+
+let randomArray = jobTitles.sort((a,b) => 0.5 - Math.random() )
+
+// let arrayWithoutQuotes = randomArray.map(eval)
+
+// console.log(randomArray)
+console.dir(randomArray, { maxArrayLength: null });

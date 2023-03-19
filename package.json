@@ -14,6 +14,7 @@
     "airplane": "^0.2.38",
     "cron": "^2.2.0",
     "dotenv": "^16.0.3",
+    "esm": "^3.2.25",
     "express": "^4.18.2",
     "instagram-private-api": "^1.45.3",
     "re2": "^1.18.0",

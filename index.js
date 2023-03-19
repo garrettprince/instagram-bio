@@ -14,7 +14,7 @@ const password = process.env.IG_PASSWORD;
 
 const usedJobsFilePath = path.join(__dirname, "used-jobs.json");
 
-async function autoBioUpdate() {
+export async function autoBioUpdate() {
   // Instatiate the IgApiClient to use throughout function
   const ig = new IgApiClient();
 
@@ -53,7 +53,7 @@ async function autoBioUpdate() {
       availableJobs[Math.floor(Math.random() * availableJobs.length)];
 
     // Update the biography with the chosen word
-    const bio = `${chosenJob}\nUnited States`;
+    const bio = `${chosenJob}\n`;
     await ig.account.setBiography(bio);
 
     // Add the used word to the usedWords array and write it to the file
